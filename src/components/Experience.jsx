@@ -36,7 +36,7 @@ export default function Experience() {
             transition={{ duration: 0.8, delay: index * 0.1 }}
             className="mb-16 ml-10 relative group"
           >
-            <div className="absolute left-[-50px] top-2.5 w-3.5 h-3.5 bg-primary rounded-full group-hover:scale-150 transition-transform shadow-[0_0_15px_rgba(100,255,218,0.5)]" />
+            <div className="absolute left-[-47px] top-8 w-3.5 h-3.5 bg-primary rounded-full group-hover:scale-150 transition-transform shadow-[0_0_15px_rgba(100,255,218,0.5)] z-10" />
 
             <div className="flex items-center gap-10 mb-8">
               <div className="w-20 h-20 shrink-0 bg-white border border-white/20 rounded-full p-4 flex items-center justify-center overflow-hidden group-hover:border-primary transition-all shadow-2xl">
