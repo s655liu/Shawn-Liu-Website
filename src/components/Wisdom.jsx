@@ -28,20 +28,23 @@ export default function Wisdom() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="flex flex-col items-center gap-10"
+            className="flex flex-col items-center"
           >
-            <h2 className="text-primary font-mono text-xs uppercase tracking-[0.5em] mb-4">
+            <h2 className="text-primary font-mono text-xl md:text-3xl uppercase tracking-[0.5em] mb-12">
               {t('wisdom-title')}
             </h2>
-            <div className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium italic leading-[1.6] text-white/90 max-w-4xl whitespace-pre-line">
-              {t('wisdom-quote')}
-            </div>
-            <div className="flex items-center gap-4 mt-8">
-              <div className="w-12 h-px bg-primary/30"></div>
-              <span className="text-primary font-mono text-sm tracking-[0.3em] uppercase">
-                {t('wisdom-author')}
-              </span>
-              <div className="w-12 h-px bg-primary/30"></div>
+            
+            <div className="flex flex-col max-w-2xl w-full">
+              <div className="text-base md:text-lg lg:text-xl font-heading font-light leading-[2] text-white/70 whitespace-pre-line tracking-wide">
+                {t('wisdom-quote')}
+              </div>
+              
+              <div className="flex items-center gap-3 mt-6 self-end">
+                <div className="w-6 h-px bg-primary/40"></div>
+                <span className="text-primary font-mono text-sm tracking-[0.2em] uppercase opacity-70">
+                  {t('wisdom-author')}
+                </span>
+              </div>
             </div>
           </motion.div>
         </div>
