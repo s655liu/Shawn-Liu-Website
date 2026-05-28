@@ -13,6 +13,7 @@ import Contact from './components/Contact'
 import BackgroundCanvas from './components/BackgroundCanvas'
 import CustomCursor from './components/CustomCursor'
 import TerminalContainer from './components/TerminalContainer'
+import Resume from './components/Resume'
 
 export default function App() {
   useEffect(() => {
@@ -53,6 +54,7 @@ export default function App() {
             <Experience />
             <Education />
             <Skills />
+            <Resume />
             <Wisdom />
           </TerminalContainer>
           

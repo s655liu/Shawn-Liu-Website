@@ -31,7 +31,7 @@ export default function Skills() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-4xl md:text-6xl font-mono uppercase tracking-widest mb-20 text-center"
+        className="text-4xl md:text-6xl font-mono uppercase tracking-widest mb-20 border-b border-white/5 pb-8"
       >
         <ScrambleText text={t('skills-title') || "Skills"} delay={200} />
       </motion.h2>

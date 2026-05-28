@@ -13,6 +13,7 @@ export default function Navbar() {
     { key: 'nav-exp', href: '#experience' },
     { key: 'nav-edu', href: '#education' },
     { key: 'nav-skills', href: '#skills' },
+    { key: 'nav-resume', href: '#resume' },
     { key: 'nav-contact', href: '#contact' },
   ]
 
