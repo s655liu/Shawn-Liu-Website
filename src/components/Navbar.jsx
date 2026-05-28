@@ -88,13 +88,7 @@ export default function Navbar() {
               transition={{ delay: 0.5 }}
               className="mt-20 flex flex-col items-center gap-6"
             >
-               <a 
-                href={lang === 'en' ? "/Files/Shawn_Liu_Resume.pdf" : "/Files/Shawn_Liu_Resume_CN.pdf"} 
-                target="_blank"
-                className="bg-primary px-10 py-4 text-black text-sm font-bold uppercase tracking-widest hover:bg-white transition-colors"
-              >
-                {t('nav-resume')}
-              </a>
+
               <div className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">
                 Based in Vancouver, BC // Open for Work
               </div>
