@@ -6,7 +6,7 @@ import { FileText, Download, ExternalLink, Eye, Terminal } from 'lucide-react'
 export default function Resume() {
   const { lang, t } = useLanguage();
   const baseUrl = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
-  
+
   const resumeFileName = lang === 'en' ? 'Shawn_Liu_Resume.pdf' : 'Shawn_Liu_Resume_CN.pdf';
   const resumeUrl = `${baseUrl}Files/${resumeFileName}`;
 
@@ -19,7 +19,7 @@ export default function Resume() {
       "Full-stack development with React, Python, and C++",
       "Robust experience across Fortinet, Nokia, and SparkLease",
       "Low-level systems programming and high-performance APIs",
-      "Background in AI/ML, PyTorch, and Computer Vision"
+      "Background in Web Development, AI/ML, and Computer Vision"
     ]
   } : {
     role: "全栈 Web 开发工程师 @ Fortinet",
@@ -29,13 +29,13 @@ export default function Resume() {
       "熟练掌握 React, Python, C++ 的全栈式系统架构与开发",
       "在 Fortinet、Nokia 及 SparkLease 拥有扎实的工业级项目经验",
       "精通底层系统级编程与高性能 API 的设计与实现",
-      "扎实的人工智能与机器学习背景（PyTorch、计算机视觉）"
+      "扎实的人工智能与机器学习背景（Web 开发、AI/ML、计算机视觉）"
     ]
   };
 
   return (
     <section id="resume" className="py-20 px-10 md:px-20 max-w-none relative overflow-hidden">
-      <motion.h2 
+      <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -44,7 +44,7 @@ export default function Resume() {
         <ScrambleText text={t('resume-title') || "Resume"} delay={200} />
       </motion.h2>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -52,12 +52,12 @@ export default function Resume() {
         className="border border-white/10 hover:border-primary/20 bg-white/3 backdrop-blur-sm shadow-2xl rounded-none overflow-hidden transition-all duration-500"
       >
         <div className="flex flex-col lg:flex-row items-stretch">
-          
+
           {/* Left Panel: Summary & Actions (45% Width) */}
           <div className="w-full lg:w-[45%] p-8 flex flex-col justify-between relative">
             {/* Top decorative accent line */}
             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
-            
+
             <div>
               {/* Header */}
               <div className="flex items-center gap-3 mb-6">
@@ -94,9 +94,9 @@ export default function Resume() {
             {/* Quick Actions Panel */}
             <div className="mt-auto pt-6 border-t border-white/5">
               <div className="flex flex-col sm:flex-row gap-4">
-                
+
                 {/* View Fullscreen Action */}
-                <a 
+                <a
                   href={resumeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -107,7 +107,7 @@ export default function Resume() {
                 </a>
 
                 {/* Download Action */}
-                <a 
+                <a
                   href={resumeUrl}
                   download={resumeFileName}
                   className="flex-1 flex items-center justify-center gap-2 bg-white/5 border border-white/10 hover:bg-white hover:text-black transition-all duration-300 px-6 py-4 rounded-none text-sm font-mono font-bold uppercase tracking-wider text-white group"
@@ -117,7 +117,7 @@ export default function Resume() {
                 </a>
 
               </div>
-              
+
               <div className="mt-4 flex justify-between items-center text-[9px] font-mono text-slate-500 uppercase tracking-widest">
                 <span>[ PDF_VER_2026 ]</span>
                 <span>{lang === 'en' ? "ACTIVE_STATE: MATCHED" : "当前语言版本: 已同步"}</span>
@@ -128,19 +128,19 @@ export default function Resume() {
 
           {/* Right Panel: Interactive Frame / Browser Mockup (55% Width) */}
           <div className="w-full lg:w-[55%] flex flex-col justify-stretch bg-[#0c0c0e] border-t lg:border-t-0 lg:border-l border-white/10 min-h-[500px] lg:min-h-0 relative">
-            
+
             {/* Browser Header Bar */}
             <div className="bg-[#121215] px-6 py-3 border-b border-white/5 flex items-center justify-between">
-              
+
               {/* Browser Address bar */}
               <div className="flex-1 max-w-md mx-auto px-4 py-1 bg-white/5 rounded-md border border-white/5 text-center text-[10px] font-mono text-slate-400 truncate">
                 shawn-liu-website.vercel.app/Files/{resumeFileName}
               </div>
-              
+
               {/* External Link */}
-              <a 
-                href={resumeUrl} 
-                target="_blank" 
+              <a
+                href={resumeUrl}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-primary transition-colors ml-4"
                 title={t('resume-view-pdf') || "Open in new tab"}
@@ -151,7 +151,7 @@ export default function Resume() {
 
             {/* Document Rendering Frame */}
             <div className="flex-1 w-full bg-slate-900/40 relative group overflow-hidden">
-              
+
               {/* Frame loading placeholder */}
               <div className="absolute inset-0 bg-[#0d0d10] flex flex-col items-center justify-center z-0 pointer-events-none p-6 text-center">
                 <FileText className="w-12 h-12 text-primary/20 mb-4 animate-pulse" />
