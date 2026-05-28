@@ -213,7 +213,7 @@ const TerminalContainer = ({ children }) => {
                 autoComplete="off"
                 autoCapitalize="off"
                 spellCheck="false"
-                autoFocus
+
               />
               <span className="text-white whitespace-pre-wrap break-all min-h-[1.25rem]">{command}</span>
               <motion.span 
