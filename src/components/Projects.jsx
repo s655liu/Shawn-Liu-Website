@@ -6,6 +6,15 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const projects = [
   {
+    id: 'math-lock',
+    title: 'Math Lock',
+    desc: 'Interactive mobile application and lock screen learning platform that surfaces bite-sized math problems and competition tracks directly on your phone keyguard.',
+    image: '/Images/math-lock.png',
+    fit: 'contain',
+    tags: ['React', 'SwiftUI', 'WidgetKit', 'JavaScript'],
+    link: 'https://github.com/s655liu/Math_Lock'
+  },
+  {
     id: 'xiangqi-pro',
     title: 'Xiangqi Pro',
     desc: 'The most authentic Chinese Chess experience online. Features a premium landing page, advanced AI matching, and real-time multiplayer.',
@@ -71,11 +80,11 @@ export default function Projects() {
             className="flex flex-col lg:flex-row gap-12 items-center bg-[#121214] border border-white/5 p-8 md:p-12"
           >
             {/* Project Image */}
-            <div className="lg:w-1/2 w-full aspect-video overflow-hidden border border-white/10">
+            <div className="lg:w-1/2 w-full aspect-video overflow-hidden border border-white/10 bg-[#08080a] flex items-center justify-center">
               <img
                 src={`${baseUrl}${project.image.startsWith('/') ? project.image.slice(1) : project.image}`}
                 alt={project.title}
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                className={`w-full h-full ${project.fit === 'contain' ? 'object-contain p-2 md:p-4' : 'object-cover'} grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105`}
               />
             </div>
 

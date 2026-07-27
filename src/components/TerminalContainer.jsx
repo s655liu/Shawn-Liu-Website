@@ -219,7 +219,7 @@ const TerminalContainer = ({ children }) => {
               <motion.span 
                 animate={{ opacity: [1, 0] }}
                 transition={{ duration: 0.8, repeat: Infinity }}
-                className="w-2 h-4 md:w-2 md:h-5 bg-primary ml-0.5 shrink-0 inline-block align-middle"
+                className="w-2 h-4d:w-2 md:h-5 bg-primary ml-0.5 shrink-0 inline-block align-middle"
               />
             </div>
           </div>
